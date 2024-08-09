@@ -1,7 +1,6 @@
-# to be honest, I don't know which libraries are needed... please add if I missed something
 keras==3.4.1
 matplotlib==3.8.3
-opencv-python==4.10.0.84
+opencv-python-headless==4.10.0.84
 pandas==2.2.0
 plotly==5.19.0
 scikit-learn==1.4.1.post1
