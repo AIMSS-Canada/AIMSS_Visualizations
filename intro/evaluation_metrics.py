@@ -101,7 +101,7 @@ steps = pd.DataFrame({
     'Error (E)': error.tolist() + ['', ''],
     'Absolute Error (AE)': round(abs(error), 2).tolist() + [round(MAE, 2), ''],
     'Squared Error (SE)': round(error**2, 2).tolist() + [round(MSE, 2), f'{round(RMSE, 2)}'],
-}, index=['']*round(100*len(edited_df)+['Mean (M)', 'Root Mean (RM)']))
+}, index=['']*round(100*len(edited_df))+['Mean (M)', 'Root Mean (RM)'])
 column_config = {
     '': st.column_config.Column(width=100),
 }
