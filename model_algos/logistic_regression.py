@@ -48,14 +48,12 @@ with col1:
         min_value = 0., 
         max_value = 1., 
         step = 0.05, 
-        value = 0.5, 
         key = 'log_m'
     )
     st.slider(
         'Center', 
         min_value = x_min, 
         max_value = x_max, 
-        value = x_min + (x_max - x_min) // 2, 
         key = 'log_c'
     )
     log_b = -st.session_state['log_m'] * st.session_state['log_c']
@@ -104,7 +102,6 @@ with col2:
         min_value = 0., 
         max_value = 1000., 
         step = 0.5, 
-        value = 170., 
         key = 'log_x'
     )
 

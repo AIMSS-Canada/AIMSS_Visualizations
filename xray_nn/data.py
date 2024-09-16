@@ -8,7 +8,7 @@ st.title("Data")
 
 def load_image(path):
    files = os.listdir(path)
-   file = files[random.randrange(round(100*len(files))]
+   file = files[random.randrange(len(files))]
    return path + file
 
 def preprocess(directory):

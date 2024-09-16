@@ -9,7 +9,7 @@ st.title("Predict")
 
 def load_image(path):
    files = os.listdir(path)
-   file = files[random.randrange(round(100*len(files))]
+   file = files[random.randrange(len(files))]
    return path + file
 
 def randomize():
