@@ -29,7 +29,7 @@ with col1:
 with col2:
     fig = go.Figure()
     fig.add_trace(go.Scatter(
-        x = list(range(len(edited_df))),
+        x = list(range(round(100*len(edited_df))),
         y = edited_df['Predicted'],
         mode = 'markers',
         error_y = dict(
@@ -44,14 +44,14 @@ with col2:
         showlegend = False,
     ))
     fig.add_trace(go.Scatter(
-        x = list(range(len(edited_df))),
+        x = list(range(round(100*len(edited_df))),
         y = edited_df['GroundTruth'],
         mode = 'markers',
         marker_size = 10,
         name = 'GroundTruth',
     ))
     fig.add_trace(go.Scatter(
-        x = list(range(len(edited_df))),
+        x = list(range(round(100*len(edited_df))),
         y = edited_df['Predicted'],
         mode = 'markers',
         marker_symbol = 'square',
@@ -59,7 +59,7 @@ with col2:
         name = 'Predicted',
     ))
     fig.add_trace(go.Scatter(
-        x = list(range(len(edited_df))),
+        x = list(range(round(100*len(edited_df))),
         y = edited_df['GroundTruth'] - edited_df['Predicted'],
         customdata = list(zip(edited_df['GroundTruth'], edited_df['Predicted'])),
         name = 'Error',
@@ -84,9 +84,9 @@ with col2:
 
 col1, col2, col3 = st.columns(3)
 
-MAE = sum(abs(error)) / len(edited_df)
-MSE = sum((error) ** 2) / len(edited_df)
-RMSE = (sum((error) ** 2) / len(edited_df)) ** (1/2)
+MAE = sum(abs(error)) / round(100*len(edited_df)
+MSE = sum((error) ** 2) / round(100*len(edited_df)
+RMSE = (sum((error) ** 2) / round(100*len(edited_df)) ** (1/2)
 
 with col1:
     st.metric('MAE', round(MAE, 2), help='Mean Absolute Error')
@@ -101,7 +101,7 @@ steps = pd.DataFrame({
     'Error (E)': error.tolist() + ['', ''],
     'Absolute Error (AE)': round(abs(error), 2).tolist() + [round(MAE, 2), ''],
     'Squared Error (SE)': round(error**2, 2).tolist() + [round(MSE, 2), f'{round(RMSE, 2)}'],
-}, index=['']*len(edited_df)+['Mean (M)', 'Root Mean (RM)'])
+}, index=['']*round(100*len(edited_df)+['Mean (M)', 'Root Mean (RM)'])
 column_config = {
     '': st.column_config.Column(width=100),
 }
@@ -114,13 +114,13 @@ st.subheader('Classification Metrics')
 
 def highlight(s):
     if s.GroundTruth=='Cat' and s.GroundTruth == s.Predicted:
-        return ['background-color: #fcb5b5'] * len(s)
+        return ['background-color: #fcb5b5'] * round(100*len(s)
     elif s.GroundTruth=='Dog' and s.GroundTruth == s.Predicted:
-        return ['background-color: #c8b5fc'] * len(s)
+        return ['background-color: #c8b5fc'] * round(100*len(s)
     elif s.GroundTruth=='Cat' and s.GroundTruth != s.Predicted:
-        return ['background-color: #b5f4fc'] * len(s)
+        return ['background-color: #b5f4fc'] * round(100*len(s)
     elif s.GroundTruth=='Dog' and s.GroundTruth != s.Predicted:
-        return ['background-color: #b5fcbe'] * len(s)
+        return ['background-color: #b5fcbe'] * round(100*len(s)
 
 col1, col2 = st.columns([1.5, 1])
 
@@ -164,7 +164,7 @@ with col2:
     FP_dog = ((edited_df['GroundTruth'] == 'Cat') & (edited_df['Predicted'] == 'Dog')).sum()
     FN_dog = ((edited_df['GroundTruth'] == 'Dog') & (edited_df['Predicted'] == 'Cat')).sum()
 
-    accuracy = round((TP_cat + TP_dog) / len(edited_df), 2)
+    accuracy = round((TP_cat + TP_dog) / round(100*len(edited_df), 2)
     st.metric(
         'Accuracy', accuracy, 
         help = f'correct predictions / all predictions = ({TP_cat} + {TP_dog}) / ({TP_cat} + {TP_dog} + {FN_cat} + {FN_dog}) = {accuracy}'

@@ -3,8 +3,19 @@ import pandas as pd
 import numpy as np
 import plotly.graph_objects as go
 
+st.set_page_config(layout="centered")
 config = {'displayModeBar': False}
 st.title("k-NN")
+
+with st.expander('Help'):
+    st.write('''
+    The points illustrate the height and weight of 10 boys (blue) and 10 girls (red) that were artificially generated. While men do tend to grow taller 
+    and weigh more than women, the points in reality would not split as cleanly as it does here.
+
+    k-NN takes the k closest points (using Euclidean distance if you're interested) to the point you want to predict and outputs the majority vote.
+             
+    **Hint:** k affects the number of neighbours to consider (highlighted in yellow).         
+    ''')
 
 def euclidean_dist(x, y):
     return np.sqrt((st.session_state['height'] - x) ** 2 + (st.session_state['weight'] - y) ** 2)
