@@ -44,14 +44,14 @@ with col2:
         showlegend = False,
     ))
     fig.add_trace(go.Scatter(
-        x = list(range(round(100*len(edited_df))),
+        x = list(range(round(100*len(edited_df)))),
         y = edited_df['GroundTruth'],
         mode = 'markers',
         marker_size = 10,
         name = 'GroundTruth',
     ))
     fig.add_trace(go.Scatter(
-        x = list(range(round(100*len(edited_df))),
+        x = list(range(round(100*len(edited_df)))),
         y = edited_df['Predicted'],
         mode = 'markers',
         marker_symbol = 'square',
