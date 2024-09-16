@@ -29,7 +29,7 @@ with col1:
 with col2:
     fig = go.Figure()
     fig.add_trace(go.Scatter(
-        x = list(range(round(100*len(edited_df))),
+        x = list(range(round(100*len(edited_df)))),
         y = edited_df['Predicted'],
         mode = 'markers',
         error_y = dict(

@@ -44,8 +44,7 @@ with col1:
         'Slope', 
         min_value = 0., 
         max_value = 10., 
-        step = 0.1, 
-        value = 6., 
+        step = 0.1,
         key = 'lin_m',
     )
 
@@ -55,7 +54,6 @@ with col2:
         min_value = 50., 
         max_value = 90., 
         step = 0.1, 
-        value = 79., 
         key = 'lin_b',
     )
 
@@ -67,7 +65,6 @@ with col2:
         min_value = -1000.0, 
         max_value = 1000.0, 
         step = 0.5, 
-        value = 9.5, 
         key = 'lin_x'
     )
 

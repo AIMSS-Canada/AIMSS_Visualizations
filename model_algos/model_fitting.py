@@ -25,7 +25,7 @@ sorted_indices = X_test.flatten().argsort()
 X_test_sorted = X_test[sorted_indices]
 y_test_sorted = y_test[sorted_indices]
 
-degrees = st.number_input('Polynomial Degrees', min_value=1, max_value=50)
+degrees = st.number_input('Polynomial Degrees', min_value=1, max_value=50, value=5)
 poly = PolynomialFeatures(degree=degrees, include_bias=False)
 poly_X_train = poly.fit_transform(X_train)
 poly_X_test = poly.transform(X_test)
