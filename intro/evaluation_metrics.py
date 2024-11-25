@@ -1,9 +1,8 @@
 import streamlit as st
-
 import pandas as pd
-
 import plotly.graph_objects as go
 
+st.set_page_config(layout="centered")
 config = {'displayModeBar': False}
 st.title("Evaluation Metrics")
 
@@ -175,13 +174,13 @@ with col2:
         precision_cat = round(TP_cat / (TP_cat + FP_cat), 2)
         st.metric(
             'Precision - Cat', precision_cat,
-            help = f'correct cat predictions / all cats predictions = {TP_cat} / ({TP_cat} + {FP_cat}) = {precision_cat}'
+            help = f'correct cat predictions / all cat predictions = {TP_cat} / ({TP_cat} + {FP_cat}) = {precision_cat}'
         )
     with dog:
         precision_dog = round(TP_dog / (TP_dog + FP_dog), 2)
         st.metric(
             'Precision - Dog', precision_dog,
-            help = f'correct dog predictions / all dogs predictions = {TP_dog} / ({TP_dog} + {FP_dog}) = {precision_dog}'
+            help = f'correct dog predictions / all dog predictions = {TP_dog} / ({TP_dog} + {FP_dog}) = {precision_dog}'
         )
 
     cat, dog = st.columns(2)
@@ -195,7 +194,7 @@ with col2:
         recall_dog = round(TP_dog / (TP_dog + FN_dog), 2)
         st.metric(
             'Recall - Dog', recall_dog,
-            help = f'correct cat predictions / all cats = {TP_dog} / ({TP_dog} + {FP_dog}) = {recall_dog}'
+            help = f'correct dog predictions / all dogs = {TP_dog} / ({TP_dog} + {FP_dog}) = {recall_dog}'
         )
 
 st.write('')

@@ -21,8 +21,6 @@ with st.expander('Help'):
     would cluster into 2 (k=2), but you are free to create as many clusters as you'd like.
     ''')
 
-
-st.error('Note: This is a bad use case for k-means (non circular clustered points), maybe use a different datset as example')
 def euclidean_dist(x, y):
     return np.sqrt((st.session_state['height'] - x) ** 2 + (st.session_state['weight'] - y) ** 2)
 

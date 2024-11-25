@@ -66,10 +66,15 @@ xray_data = st.Page(
     title = 'Data',
     icon = ':material/rib_cage:',
 )
-xray_model = st.Page(
-    'xray_nn/model.py', 
-    title = 'Model',
+loss = st.Page(
+    'xray_nn/model_loss.py', 
+    title = 'Model Loss',
     icon = ':material/share:',
+)
+tuning = st.Page(
+    'xray_nn/model_tuning.py', 
+    title = 'Model Tuning',
+    icon = ':material/build:',
 )
 xray_predict = st.Page(
     'xray_nn/predict.py', 
@@ -83,6 +88,10 @@ pg = st.navigation({
     'Home': [welcome],
     'Intro to ML': [eval_metrics_page, preprocessing],
     'Model Algorithms': [kmeans, dt, linr, logr, knn, fit],
-    'Chest X-ray Classification': [xray_data, xray_model, xray_predict],
-})
+    'Chest X-ray Classification': [xray_data, loss, tuning, xray_predict],
+}, expanded=True)
 pg.run()
+
+st.logo("./src/49018_AIMSS_RB_GR_MV-05.webp", size="large", link="https://www.aimss.ca")
+with st.sidebar:
+    st.write("Developed by Ying Wan")

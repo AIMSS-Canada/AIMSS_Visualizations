@@ -4,6 +4,8 @@ import random
 import cv2 
 import numpy as np
 
+st.set_page_config(layout="centered")
+
 st.title("Data")
 
 def load_image(path):

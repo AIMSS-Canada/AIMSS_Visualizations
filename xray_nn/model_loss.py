@@ -3,6 +3,8 @@ import pandas as pd
 import plotly.express as px
 import plotly.graph_objects as go
 
+st.set_page_config(layout="centered")
+
 st.title("Model")
 
 lr = st.select_slider(

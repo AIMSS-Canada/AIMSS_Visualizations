@@ -1,10 +1,9 @@
 import streamlit as st
-
 import pandas as pd
 import numpy as np
-
 import plotly.graph_objects as go
 
+st.set_page_config(layout="centered")
 config = {'displayModeBar': False}
 st.title("Data Preprocessing")
 

@@ -1,10 +1,7 @@
-import streamlit as st
-import plotly.graph_objects as go
 import pandas as pd
-import networkx as nx
 import matplotlib.pyplot as plt
-import matplotlib.patches as patches
 
+import streamlit as st
 st.set_page_config(layout="wide")
 config = {'displayModeBar': False}
 st.title("Decision Trees")
