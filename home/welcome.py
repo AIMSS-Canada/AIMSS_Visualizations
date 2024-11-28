@@ -12,7 +12,7 @@ with mid:
         st.image("./src/AIMSS-whiteback-darkteal.webp")
 
 st.title("Hello")
-st.write("Welcome to the 2024-2025 Artificial Intelligence in Medical Systems Society's Intro to AI in Medical Applications Course!")
+st.write("Welcome to the 2024-2025 Artificial Intelligence in Medical Systems Society's AI in Healthcare Course!")
 st.write("This is a little hub of how some simple models work. Since it's a new addition to the course, if there are any suggestions or issues, please let us know!")
 
 st.header("The Team")
