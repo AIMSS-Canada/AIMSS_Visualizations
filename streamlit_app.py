@@ -93,5 +93,5 @@ pg = st.navigation({
 pg.run()
 
 st.logo("./src/49018_AIMSS_RB_GR_MV-05.webp", size="large", link="https://www.aimss.ca")
-with st.sidebar:
-    st.write("Developed by Ying Wan")
+# with st.sidebar:
+#     st.write("Developed by Ying Wan")
