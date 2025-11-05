@@ -35,12 +35,12 @@ def logr():
 
     col1, col2 = st.columns(2, gap='large')
 
-    if 'log_m' not in st.session_state:
-        st.session_state['log_m'] = 0.5
-    if 'log_c' not in st.session_state:
-        st.session_state['log_c'] = x_min + (x_max - x_min) // 2
-    if 'log_x' not in st.session_state:
-        st.session_state['log_x'] = 170
+    # if 'log_m' not in st.session_state:
+    #     st.session_state['log_m'] = 0.5
+    # if 'log_c' not in st.session_state:
+    #     st.session_state['log_c'] = x_min + (x_max - x_min) // 2
+    # if 'log_x' not in st.session_state:
+    #     st.session_state['log_x'] = 170
 
     with col1:
         st.slider(
