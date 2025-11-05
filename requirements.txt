@@ -3,4 +3,5 @@ matplotlib
 opencv-python-headless==4.10.0.84
 pandas==2.2.0
 plotly==5.19.0
-streamlit==1.40.1
+streamlit==1.51.0
+streamlit-pdf

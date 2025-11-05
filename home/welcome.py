@@ -11,13 +11,36 @@ with mid:
     except:
         st.image("./src/AIMSS-whiteback-darkteal.webp")
 
-st.title("Hello")
-st.write("Welcome to the 2024-2025 Artificial Intelligence in Medical Systems Society's AI in Healthcare Course!")
-st.write("This is a little hub of how some simple models work. Since it's a new addition to the course, if there are any suggestions or issues, please let us know!")
+st.title("AI in Healthcare Course 25/26")
 
-st.header("The Team")
-st.write("**Instructors**: Bahareh Behroozi Asl, Aminreza Khandan, Golnaz Mesbahi, Mohammad Reza Taesiri")
-st.write("**Leads**: Micheal Xie, Ying Wan")
-st.write("**Special Thanks**: Shane Eaton, Ehsan Misaghi")
+session_data = {
+    "Session": [
+        "Intro to AI and Data",
+        "ML Algorithms",
+        "Deep Learning Algorithms",
+        "Large Language Models",
+        "How to Read an AI Paper",
+        "Applications of AI and Research",
+    ],
+    "Date": [
+        "Nov. 3, 2025", 
+        "Dec. 1, 2025", 
+        "Jan. 5, 2026",
+        "Feb. 2, 2026",
+        "Mar. 2, 2026",
+        "Apr. 6, 2026",
+    ],
+    "Instructor": [
+        "Nazila Ameli", 
+        "Mahdieh Mallahnezhad", 
+        "Golnaz Mesbahi",
+        "Tahereh Firoozi",
+        "Golnaz Mesbahi",
+        "Ehsan Misaghi",
+    ],
+}
+st.dataframe(session_data)
 
-
+st.write("**Acknowledgements**")
+st.write("Instructors: Mahdieh Mallahnezhad, Nazila Ameli, Golnaz Mesbahi, Tahereh Firoozi")
+st.write("Support: Ehsan Misaghi, Micheal Xie, Ying Wan, Shane Eaton")
