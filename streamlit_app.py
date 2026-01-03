@@ -70,6 +70,14 @@ resources_2 = st.Page(
 # Extra Resources
 
 # ----------------------------------
+# Assignment
+assignment = st.Page(
+    'Assignment/assignment.py', 
+    title = 'Assignment',
+    icon = ':material/assignment:',
+)
+
+# ----------------------------------
 # Chest Xray NN
 
 # xray_data = st.Page(
@@ -95,17 +103,18 @@ resources_2 = st.Page(
 
 # ----------------------------------
 
-pg = st.navigation({
-    'Home': [welcome],
-    '1. Intro to AI and Data': [recording_1, activities_1, resources_1],
-    '2. Machine Learning Algorithms': [activities_2],
-    '3. Deep Learning Algorithms': [],
-    '4. Large Language Models': [],
-    '5. How to Read an AI Paper': [],
-    '6. AI Applications': [],
-    'Extra Resources': [],
-    # 'Chest X-ray Classification': [xray_data, loss, tuning, xray_predict],
-}, expanded=True)
-pg.run()
-
-st.logo("./src/49018_AIMSS_RB_GR_MV-05.webp", size="large", link="https://www.aimss.ca")
+if  __name__ == "__main__":
+    pg = st.navigation({
+        'Home': [welcome],
+        '1. Intro to AI and Data': [recording_1, activities_1, resources_1],
+        '2. Machine Learning Algorithms': [recording_2, activities_2, resources_2],
+        '3. Deep Learning Algorithms': [],
+        '4. Large Language Models': [],
+        '5. How to Read an AI Paper': [],
+        '6. AI Applications': [],
+        'Extra Resources': [],
+        'Assignment': [assignment]
+        # 'Chest X-ray Classification': [xray_data, loss, tuning, xray_predict],
+    }, expanded=True)
+    pg.run()
+    st.logo("./src/49018_AIMSS_RB_GR_MV-05.webp", size="large", link="https://www.aimss.ca")
