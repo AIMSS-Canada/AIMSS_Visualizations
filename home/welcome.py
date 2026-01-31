@@ -28,13 +28,13 @@ session_data = {
         "Jan. 5, 2026",
         "Feb. 2, 2026",
         "Mar. 2, 2026",
-        "Apr. 6, 2026",
+        "Mar. 30, 2026",
     ],
     "Instructor": [
         "Nazila Ameli", 
         "Mahdieh Mallahnezhad", 
         "Golnaz Mesbahi",
-        "Tahereh Firoozi",
+        "Sacha Davis",
         "Golnaz Mesbahi",
         "Ehsan Misaghi",
     ],
@@ -42,5 +42,5 @@ session_data = {
 st.dataframe(session_data)
 
 st.write("**Acknowledgements**")
-st.write("Instructors: Mahdieh Mallahnezhad, Nazila Ameli, Golnaz Mesbahi, Tahereh Firoozi")
+st.write("Instructors: Mahdieh Mallahnezhad, Nazila Ameli, Golnaz Mesbahi, Sacha Davis")
 st.write("Support: Ehsan Misaghi, Micheal Xie, Ying Wan, Shane Eaton")

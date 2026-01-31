@@ -57,6 +57,19 @@ resources_2 = st.Page(
 # ----------------------------------
 # 3. DL Algorithms
 
+recording_3 = st.Page(
+    'ai_algos/3-recording.py', 
+    title = 'Recording',
+    icon = ':material/video_library:',
+    url_path = '3-recording',
+)
+resources_3 = st.Page(
+    'ai_algos/3-resources.py', 
+    title = 'Resources',
+    icon = ':material/bookmark_border:',
+    url_path = '3-resources',
+)
+
 # ----------------------------------
 # 4. LLMs
 
@@ -108,7 +121,7 @@ if  __name__ == "__main__":
         'Home': [welcome],
         '1. Intro to AI and Data': [recording_1, activities_1, resources_1],
         '2. Machine Learning Algorithms': [recording_2, activities_2, resources_2],
-        '3. Deep Learning Algorithms': [],
+        '3. Deep Learning Algorithms': [recording_3, resources_3],
         '4. Large Language Models': [],
         '5. How to Read an AI Paper': [],
         '6. AI Applications': [],
