@@ -89,6 +89,19 @@ resources_4 = st.Page(
 # ----------------------------------
 # 5. How to Read an AI Paper
 
+recording_5 = st.Page(
+    'ai_paper/5-recording.py', 
+    title = 'Recording',
+    icon = ':material/video_library:',
+    url_path = '5-recording',
+)
+resources_4 = st.Page(
+    'ai_paper/5-resources.py', 
+    title = 'Resources',
+    icon = ':material/bookmark_border:',
+    url_path = '5-resources',
+)
+
 # ----------------------------------
 # 6. AI Applications
 
@@ -136,7 +149,7 @@ if  __name__ == "__main__":
         '2. Machine Learning Algorithms': [recording_2, activities_2, resources_2],
         '3. Deep Learning Algorithms': [recording_3, resources_3],
         '4. Large Language Models': [recording_4, resources_4],
-        '5. How to Read an AI Paper': [],
+        '5. How to Read an AI Paper': [recording_5, resources_5],
         '6. AI Applications': [],
         'Extra Resources': [],
         'Assignment': [assignment]
