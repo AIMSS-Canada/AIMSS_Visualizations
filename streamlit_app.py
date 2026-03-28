@@ -95,7 +95,7 @@ recording_5 = st.Page(
     icon = ':material/video_library:',
     url_path = '5-recording',
 )
-resources_4 = st.Page(
+resources_5 = st.Page(
     'ai_paper/5-resources.py', 
     title = 'Resources',
     icon = ':material/bookmark_border:',
