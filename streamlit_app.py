@@ -90,13 +90,13 @@ resources_4 = st.Page(
 # 5. How to Read an AI Paper
 
 recording_5 = st.Page(
-    '5_ai_papers/5-recording.py', 
+    '5_ai_paper/5-recording.py', 
     title = 'Recording',
     icon = ':material/video_library:',
     url_path = '5-recording',
 )
 resources_5 = st.Page(
-    '5_ai_papers/5-resources.py', 
+    '5_ai_paper/5-resources.py', 
     title = 'Resources',
     icon = ':material/bookmark_border:',
     url_path = '5-resources',
