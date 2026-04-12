@@ -14,19 +14,19 @@ welcome = st.Page(
 # 1. Intro to AI and Data
 
 recording_1 = st.Page(
-    'intro/1-recording.py', 
+    '1_intro/1-recording.py', 
     title = 'Recording',
     icon = ':material/video_library:',
     url_path = '1-recording',
 )
 activities_1 = st.Page(
-    'intro/1-activities.py', 
+    '1_intro/1-activities.py', 
     title = 'Activities',
     icon = ':material/analytics:',
     url_path = '1-activities',
 )
 resources_1 = st.Page(
-    'intro/1-resources.py', 
+    '1_intro/1-resources.py', 
     title = 'Resources',
     icon = ':material/bookmark_border:',
     url_path = '1-resources',
@@ -36,19 +36,19 @@ resources_1 = st.Page(
 # 2. ML Algorithms
 
 recording_2 = st.Page(
-    'ml_algos/2-recording.py', 
+    '2_ml_algos/2-recording.py', 
     title = 'Recording',
     icon = ':material/video_library:',
     url_path = '2-recording',
 )
 activities_2 = st.Page(
-    'ml_algos/2-activities.py', 
+    '2_ml_algos/2-activities.py', 
     title = 'Activities',
     icon = ':material/analytics:',
     url_path = '2-activities',
 )
 resources_2 = st.Page(
-    'ml_algos/2-resources.py', 
+    '2_ml_algos/2-resources.py', 
     title = 'Resources',
     icon = ':material/bookmark_border:',
     url_path = '2-resources',
@@ -58,13 +58,13 @@ resources_2 = st.Page(
 # 3. DL Algorithms
 
 recording_3 = st.Page(
-    'ai_algos/3-recording.py', 
+    '3_ai_algos/3-recording.py', 
     title = 'Recording',
     icon = ':material/video_library:',
     url_path = '3-recording',
 )
 resources_3 = st.Page(
-    'ai_algos/3-resources.py', 
+    '3_ai_algos/3-resources.py', 
     title = 'Resources',
     icon = ':material/bookmark_border:',
     url_path = '3-resources',
@@ -74,13 +74,13 @@ resources_3 = st.Page(
 # 4. LLMs
 
 recording_4 = st.Page(
-    'llms/4-recording.py', 
+    '4_llms/4-recording.py', 
     title = 'Recording',
     icon = ':material/video_library:',
     url_path = '4-recording',
 )
 resources_4 = st.Page(
-    'llms/4-resources.py', 
+    '4_llms/4-resources.py', 
     title = 'Resources',
     icon = ':material/bookmark_border:',
     url_path = '4-resources',
@@ -89,8 +89,34 @@ resources_4 = st.Page(
 # ----------------------------------
 # 5. How to Read an AI Paper
 
+recording_5 = st.Page(
+    '5_ai_papers/5-recording.py', 
+    title = 'Recording',
+    icon = ':material/video_library:',
+    url_path = '5-recording',
+)
+resources_5 = st.Page(
+    '5_ai_papers/5-resources.py', 
+    title = 'Resources',
+    icon = ':material/bookmark_border:',
+    url_path = '5-resources',
+)
+
 # ----------------------------------
 # 6. AI Applications
+
+recording_6 = st.Page(
+    '6_applications/6-recording.py', 
+    title = 'Recording',
+    icon = ':material/video_library:',
+    url_path = '6-recording',
+)
+resources_6 = st.Page(
+    '6_applications/6-resources.py', 
+    title = 'Resources',
+    icon = ':material/bookmark_border:',
+    url_path = '6-resources',
+)
 
 # ----------------------------------
 # Extra Resources
@@ -136,8 +162,8 @@ if  __name__ == "__main__":
         '2. Machine Learning Algorithms': [recording_2, activities_2, resources_2],
         '3. Deep Learning Algorithms': [recording_3, resources_3],
         '4. Large Language Models': [recording_4, resources_4],
-        '5. How to Read an AI Paper': [],
-        '6. AI Applications': [],
+        '5. How to Read an AI Paper': [recording_5, resources_5],
+        '6. AI Applications': [recording_6, resources_6],
         'Extra Resources': [],
         'Assignment': [assignment]
         # 'Chest X-ray Classification': [xray_data, loss, tuning, xray_predict],
