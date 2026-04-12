@@ -1,6 +1,6 @@
 import streamlit as st
-from .demos.data_preprocessing import dp
-from .demos.evaluation_metrics import eval
+dp = importlib.import_module("1_intro.demos.data_preprocessing")
+eval = importlib.import_module("1_intro.demos.evaluation_metrics")
 
 st.set_page_config(layout="centered")
 
